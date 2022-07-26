@@ -19,7 +19,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
 
     private Context context;
     private List<Object> list;
-    private ClickListener listener;
 
     public RecyclerAdapter(Context context) {
         this.context = context;
@@ -29,9 +28,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
         this.list = list;
     }
 
-    public void setListener(ClickListener listener) {
-        this.listener = listener;
-    }
 
     @NonNull
     @Override
@@ -54,11 +50,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
         return list.size();
     }
 
-    public interface ClickListener {
-        void itemClick(int pos);
-
-        void itemSwipe(int pos);
-    }
 
     public class ItemHold extends RecyclerView.ViewHolder {
 
@@ -74,6 +65,5 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemHo
             content = itemView.findViewById(R.id.tv_content);
             hide = itemView.findViewById(R.id.tv_show);
         }
-
     }
 }
