@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <ListView
-        android:id="@+id/listview"
+    <com.example.swiptest.tools.customviews.SlideRecyclerView
+        android:id="@+id/slide"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
