@@ -39,10 +39,9 @@ export default {
           username: this.loginForm.username,
           password: this.loginForm.password
         })
-      // loginSystem(this.loginForm.username, this.loginForm.password)
         .then(successResponse => {
           if (successResponse.data.code === 200) {
-            this.$router.replace({path: '/index'})
+            this.$router.replace({path: '/users'})
             this.$message({
               type: 'success',
               message: `欢迎${this.loginForm.username}`
